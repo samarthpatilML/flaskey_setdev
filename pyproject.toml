@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projgen-samarth"   # ⚠️ must be UNIQUE
+version = "0.1.0"
+description = "CLI tool to generate Python projects"
+readme = "README.md"
+authors = [{name="Samarth Patil"}]
+requires-python = ">=3.7"
+
+[project.scripts]
+create-project = "projgen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
