@@ -1,2 +1,0 @@
-dist
-flaskey_setdev
