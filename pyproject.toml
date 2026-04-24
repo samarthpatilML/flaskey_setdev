@@ -4,14 +4,39 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flaskey_setdev"
-version = "0.2.0"
+version = "0.2.1"
 description = "CLI tool to generate modern Flask projects"
 readme = "README.md"
-authors = [{name="Samarth Patil"}]
+authors = [{ name = "Samarth Patil" }]
 requires-python = ">=3.7"
 
+dependencies = [                                  # ← Flask gets installed alongside your tool
+    "flask>=2.0",
+]
+
+keywords = ["flask", "cli", "project generator", "scaffolding", "boilerplate"]
+
+classifiers = [                                   # ← improves PyPI search visibility
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Code Generators",
+]
+
+[project.urls]
+Homepage = "https://github.com/samarthpatil/flaskey_setdev"   # ← update to real URL
+Source = "https://github.com/samarthpatil/flaskey_setdev"
+"Bug Tracker" = "https://github.com/samarthpatil/flaskey_setdev/issues"
+
 [project.scripts]
-create-project = "flaskey_setdev.cli:main"
+flaskey = "flaskey_setdev.cli:main"               # ← renamed: matches your tool's brand
 
 [tool.setuptools.packages.find]
 where = ["."]

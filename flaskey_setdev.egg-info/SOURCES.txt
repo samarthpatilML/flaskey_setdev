@@ -7,4 +7,5 @@ flaskey_setdev.egg-info/PKG-INFO
 flaskey_setdev.egg-info/SOURCES.txt
 flaskey_setdev.egg-info/dependency_links.txt
 flaskey_setdev.egg-info/entry_points.txt
+flaskey_setdev.egg-info/requires.txt
 flaskey_setdev.egg-info/top_level.txt

@@ -1,25 +1,47 @@
 Metadata-Version: 2.4
 Name: flaskey_setdev
-Version: 0.2.0
+Version: 0.2.1
 Summary: CLI tool to generate modern Flask projects
 Author: Samarth Patil
+Project-URL: Homepage, https://github.com/samarthpatil/flaskey_setdev
+Project-URL: Source, https://github.com/samarthpatil/flaskey_setdev
+Project-URL: Bug Tracker, https://github.com/samarthpatil/flaskey_setdev/issues
+Keywords: flask,cli,project generator,scaffolding,boilerplate
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Code Generators
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
+Requires-Dist: flask>=2.0
 
 # 🚀 Flaskey SetDev
 
-> Create modern Flask projects instantly with a single command.
+> Generate modern, ready-to-run Flask projects with a single command.
+
+![PyPI](https://img.shields.io/pypi/v/flaskey-setdev)
+![Python](https://img.shields.io/pypi/pyversions/flaskey-setdev)
+![License](https://img.shields.io/pypi/l/flaskey-setdev)
+![Downloads](https://img.shields.io/pypi/dm/flaskey-setdev)
 
 ---
 
 ## ✨ Features
 
-* ⚡ One-command project creation
-* 🎨 Modern Bootstrap UI (like React/Next.js feel)
-* 📦 Automatic virtual environment setup
-* 🔧 Auto dependency installation
-* 🧱 Clean project structure
-* 🖥️ Beginner-friendly
+- ⚡ One-command project scaffolding
+- 🎨 Modern Bootstrap 5 UI out of the box
+- 📦 Automatic virtual environment creation
+- 🔧 Auto dependency installation via pip
+- 🧱 Clean, beginner-friendly project structure
+- 🖥️ Cross-platform — Windows, macOS, Linux
+- 🔒 Auto-generated `.gitignore`
 
 ---
 
@@ -33,41 +55,61 @@ pip install flaskey-setdev
 
 ## ⚡ Usage
 
-Create a new Flask project:
+```bash
+flaskey flask <project-name>
+```
+
+**Example:**
 
 ```bash
-create-project flask myapp
+flaskey flask myapp
+```
+
+**Other options:**
+
+```bash
+# Show help
+flaskey --help
+
+# Show version
+flaskey --version
 ```
 
 ---
 
-## 📁 Project Structure
-
-After running the command, you’ll get:
+## 📁 Generated Project Structure
 
 ```
 myapp/
-├── app.py
-├── requirements.txt
+├── app.py                  # Flask entry point
+├── requirements.txt        # Project dependencies
+├── .gitignore              # Ignores venv, __pycache__, etc.
 ├── templates/
-│   └── index.html
+│   └── index.html          # Bootstrap 5 landing page
 ├── static/
-│   └── style.css
-├── venv/
+│   └── style.css           # Custom styles
+└── venv/                   # Auto-created virtual environment
 ```
 
 ---
 
 ## 🚀 Run Your Project
 
+**Windows:**
 ```bash
 cd myapp
-venv\Scripts\activate   # On Windows
+venv\Scripts\activate
 python app.py
 ```
 
-Then open:
+**macOS / Linux:**
+```bash
+cd myapp
+source venv/bin/activate
+python app.py
+```
 
+Then open your browser at:
 ```
 http://127.0.0.1:5000
 ```
@@ -76,29 +118,31 @@ http://127.0.0.1:5000
 
 ## 🎨 UI Preview
 
-* Modern landing page
-* Navbar + Hero section
-* Buttons + responsive layout
+Your generated app comes with:
+
+- Dark navbar with your project name
+- Centered hero section — **"Build Something Amazing"**
+- Primary + outline action buttons
+- Responsive layout via Bootstrap 5
+- Subtle gradient background
 
 ---
 
 ## 🛠️ Troubleshooting
 
-### ❌ Command not found
+### ❌ `flaskey` command not found
 
-Add this to your PATH:
+Add Python's scripts folder to your PATH:
 
 ```
-C:\Users\<YourUsername>\AppData\Roaming\Python\PythonXX\Scripts
+C:\Users\<YourName>\AppData\Roaming\Python\Python3XX\Scripts
 ```
 
-Restart terminal after adding.
+Restart your terminal after updating PATH.
 
 ---
 
-### ❌ PowerShell execution error
-
-Run:
+### ❌ PowerShell execution policy error (Windows)
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -106,20 +150,34 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-## 💡 Requirements
+### ❌ `pip` not found inside venv
 
-* Python 3.7+
-* pip installed
+Make sure you're using Python 3.7+ and that pip is available:
+
+```bash
+python --version
+python -m ensurepip --upgrade
+```
 
 ---
 
-## 🔥 Future Features
+## 💡 Requirements
 
-* FastAPI project generator
-* Django template support
-* Interactive CLI mode
-* Auto-open browser
-* More UI templates
+| Requirement | Version |
+|-------------|---------|
+| Python | 3.7+ |
+| pip | Latest recommended |
+
+---
+
+## 🔥 Roadmap
+
+- [ ] FastAPI project generator
+- [ ] Django template support
+- [ ] Interactive CLI mode (`--interactive`)
+- [ ] Auto-open browser after project creation
+- [ ] Multiple UI themes to choose from
+- [ ] Docker support
 
 ---
 
@@ -129,19 +187,31 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ---
 
-## ⭐ Support
+## 🤝 Contributing
 
-If you like this project, give it a ⭐ on GitHub!
+Contributions are welcome! Feel free to:
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'Add my feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
 
 ---
 
-## 📢 Contributing
+## 📄 License
 
-Feel free to fork, improve, and submit pull requests.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## ⭐ Support
+
+If Flaskey saved you time, give it a ⭐ on GitHub — it helps a lot!
 
 ---
 
 ## 🧠 Why Flaskey?
 
-Flaskey helps beginners and developers quickly start projects
-without wasting time on setup — just create and build 🚀
+Stop wasting time on boilerplate. Flaskey gets you from zero to a running Flask app
+in under 60 seconds — so you can focus on building, not configuring. 🚀
